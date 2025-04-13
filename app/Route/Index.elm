@@ -81,8 +81,8 @@ body app shared =
         , p [ style "max-width" "800px" ]
             [ text <| "the message of the day is: " ++ app.data.message
             ]
-        , p [ style "max-width" "800px" ]
-            [ text "hi, im youwen. i study (pure) math and computer science at ucsb. i like transit and urban planning and functional programming and linux and foss and algebra and other generally good things such as the wind gently rustling through the leaves as i stroll through the park."
+        , p []
+            [ text "hi, im youwen. i study (pure) math and computer science at ucsb. i like public transit and urban planning and functional programming and linux and foss and algebra and other generally good things such as the wind gently rustling through the leaves as i stroll through the park."
             ]
         , p []
             [ text "some things i've worked on:"
