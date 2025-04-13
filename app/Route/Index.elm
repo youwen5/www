@@ -78,7 +78,7 @@ body : { a | data : { b | message : String } } -> c -> List (Html.Styled.Html ms
 body app shared =
     [ div [ css [ maxWidth (px 800), marginLeft auto, marginRight auto ] ]
         [ h1 [] [ text "Youwen Wu" ]
-        , p [ style "max-width" "800px" ]
+        , p []
             [ text <| "the message of the day is: " ++ app.data.message
             ]
         , p []
@@ -92,10 +92,10 @@ body app shared =
                 , li [] [ a [ href "https://github.com/zen-browser/www" ] [ text "zen-browser/desktop" ] ]
                 ]
             ]
-        , p [ style "max-width" "800px" ]
-            [ a [ href "/courses" ] [ text "a list of the courses ive taken at ucsb." ]
+        , p []
+            [ a [ href "/courses" ] [ text "a list of the courses ive taken at ucsb" ]
             ]
-        , p [ style "max-width" "800px" ]
+        , p []
             [ text "software i use, for nerds who care:"
             , ul []
                 [ li [] [ text "distro: ", a [ href "https://nixos.org" ] [ text "NixOS" ] ]
@@ -109,23 +109,26 @@ body app shared =
                 ]
             ]
         , h2 [] [ text "about this site" ]
-        , p [ style "max-width" "800px" ]
+        , p []
             [ text "welcome to my quiet corner of the www! i continuously stay up to date with the latest trends in software development so i can do the exact opposite. i intend for this site to be a love letter to the web and what it represents -- namely, the free and unfettered exchange of information and human thought. to that effect, i promise to never ship you GenAI slop (an insult to human life itself), or talk about JavaScript (the antithesis of rational thought)."
             ]
-        , p [ style "max-width" "800px" ]
+        , p []
             [ text "this site was built with "
             , a [ href "https://elm-lang.org/" ] [ text "elm" ]
             , text ", a purely functional programming language for writing web apps. it allows you to program for the web in a sane fashion, eschewing all mainstream frameworks and languages, and ruling out entire classes of pathologic behavior through careful design of types. all without writing a single line resembling html/css/js."
             ]
-        , p [ style "max-width" "800px" ]
+        , p []
             [ text "unfortunately, this has some undesired side effects. you may have noticed this site is entirely empty and unstyled. this unfortunate reality is due to the fact that ive been far too busy scaffolding the theoretical foundations of the site and pondering the mathematical structure of its type system to actually learn how to do CSS, or write any content."
             ]
-        , p [ style "max-width" "800px" ]
+        , p []
             [ text "my old site, which looks considerably nicer, written using Svelte, is available here for now: "
             , a [ href "https://youwen.dev" ] [ text "https://youwen.dev" ]
             , text ", while i migrate over to this one."
             ]
-        , div [ style "max-width" "800px" ]
+        , p []
+            [ a [ href "https://github.com/youwen5/www" ] [ text "source code of this site" ]
+            ]
+        , div []
             [ table []
                 [ tr []
                     [ td []
