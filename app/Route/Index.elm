@@ -6,7 +6,7 @@ import FatalError exposing (FatalError)
 import Head
 import Head.Seo as Seo
 import Html.Styled exposing (a, b, div, h1, h2, i, img, li, p, table, td, text, toUnstyled, tr, ul)
-import Html.Styled.Attributes exposing (alt, css, href, src, style, width)
+import Html.Styled.Attributes exposing (alt, css, href, src, width)
 import List exposing (map)
 import Pages.Url
 import PagesMsg exposing (PagesMsg)
@@ -51,7 +51,7 @@ data : BackendTask FatalError Data
 data =
     BackendTask.succeed Data
         |> BackendTask.andMap
-            (BackendTask.succeed "please sir im tired of winning")
+            (BackendTask.succeed "glorp")
 
 
 head :
@@ -89,7 +89,7 @@ body app shared =
             , ul []
                 [ li [] [ a [ href "https://github.com/nixos/nixpkgs" ] [ text "nixos/nixpkgs" ], text " (nixpkgs package repository and the NixOS linux distribution)" ]
                 , li [] [ a [ href "https://github.com/youwen5/jankboard" ] [ text "team-1280/jankboard" ], text " (FRC Team 1280 robot control dashboard with 3D visuals)" ]
-                , li [] [ a [ href "https://github.com/zen-browser/www" ] [ text "zen-browser/desktop" ], text " cool firefox-based browser" ]
+                , li [] [ a [ href "https://github.com/zen-browser/www" ] [ text "zen-browser/desktop" ], text " (cool firefox-based browser)" ]
                 , li [] [ a [ href "https://virion.youwen.dev" ] [ text "youwen5/virion" ], text " (crummy compartmental modeling of disease, finalist proj at ucsb datathon)" ]
                 ]
             ]
@@ -97,34 +97,35 @@ body app shared =
             [ a [ href "/courses" ] [ text "a list of the courses ive taken at ucsb" ]
             ]
         , p []
-            [ text "software i use, for nerds who care:"
+            [ text "excuse the mess! i'm in the middle of migrating from my old Svelte-based site to this Elm-based site. my old site is considerably more polished and still available at "
+            , a [ href "https://youwen.dev" ] [ text "https://youwen.dev" ]
+            , text ", while i find some time to work on this one."
+            ]
+        , p []
+            [ text "my software allegiances, for nerds who care:"
             , ul []
-                [ li [] [ text "distro: ", a [ href "https://nixos.org" ] [ text "NixOS" ] ]
-                , li [] [ text "desktop environment: ", a [ href "https://hyprland.org" ] [ text "hyprland" ] ]
+                [ li [] [ text "distro: ", a [ href "https://nixos.org" ] [ text "NixOS" ], text " (harder than arch btw)" ]
+                , li [] [ text "window manager: ", a [ href "https://hyprland.org" ] [ text "hyprland" ], text " with a ", a [ href "https://github.com/dawsers/hyprscroller" ] [ text "scrolling layout" ] ]
                 , li [] [ text "kernel: linux-zen" ]
                 , li [] [ text "terminal: kitty" ]
                 , li [] [ text "editor: ", a [ href "https://github.com/youwen5/viminal2" ] [ text "neovim" ] ]
                 , li [] [ text "bar: waybar" ]
                 , li [] [ text "login shell: ", a [ href "https://nushell.sh" ] [ text "nushell" ] ]
                 , li [] [ text "programming language: the best one for the task, but usually Rust/Haskell/Elm" ]
+                , li [] [ text "DAW: ", a [ href "https://www.reaper.fm/" ] [ text "reaper" ] ]
                 ]
             ]
         , h2 [] [ text "about this site" ]
         , p []
-            [ text "welcome to my quiet corner of the www! i continuously stay up to date with the latest trends in software development so i can do the exact opposite. i intend for this site to be a love letter to the web and what it represents -- namely, the free and unfettered exchange of information and human thought. to that effect, i promise to never ship you GenAI slop (an insult to human life itself), or talk about JavaScript (the antithesis of rational thought)."
+            [ text "welcome to my quiet corner of the world wide web! i continuously stay up to date with the latest trends in software development so i can do the exact opposite. i intend for this site to be a love letter to the web and what it represents -- namely, the free and unfettered exchange of information and human thought. to that end, i promise nothing on this site will ever be made by GenAI."
             ]
         , p []
             [ text "this site was built with "
             , a [ href "https://elm-lang.org/" ] [ text "elm" ]
-            , text ", a purely functional programming language for writing web apps. it allows you to program for the web in a sane fashion, eschewing all mainstream frameworks and languages, and ruling out entire classes of pathologic behavior through careful design of types. all without writing a single line resembling html/css/js."
+            , text ", a purely functional programming language for writing web apps. programming in elm is delightful and lets you ignore all mainstream web trends and frameworks while ruling out entire classes of unwanted behavior through the careful design of types. all without writing a single line of html/css/js."
             ]
         , p []
             [ text "unfortunately, this has some undesired side effects. you may have noticed this site is entirely empty and unstyled. this unfortunate reality is due to the fact that ive been far too busy scaffolding the theoretical foundations of the site and pondering the mathematical structure of its type system to actually learn how to do CSS, or write any content."
-            ]
-        , p []
-            [ text "my old site, which looks considerably nicer, written using Svelte, is available here for now: "
-            , a [ href "https://youwen.dev" ] [ text "https://youwen.dev" ]
-            , text ", while i migrate over to this one."
             ]
         , p []
             [ a [ href "https://github.com/youwen5/www" ] [ text "source code of this site" ]
@@ -164,6 +165,12 @@ body app shared =
                         ]
                     ]
                 ]
+            ]
+        , h2 [] [ text "webring" ]
+        , p []
+            [ a [ href "https://quantum9innovation.github.io/" ] [ text "q9i" ]
+            , text " - "
+            , a [ href "https://web.kaitotlex.systems/" ] [ text "kaitotlex" ]
             ]
         ]
     ]
