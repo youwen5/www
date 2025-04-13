@@ -87,9 +87,10 @@ body app shared =
         , p []
             [ text "some things i've worked on:"
             , ul []
-                [ li [] [ a [ href "https://github.com/nixos/nixpkgs" ] [ text "nixos/nixpkgs" ] ]
-                , li [] [ a [ href "https://github.com/youwen5/jankboard" ] [ text "team-1280/jankboard" ] ]
-                , li [] [ a [ href "https://github.com/zen-browser/www" ] [ text "zen-browser/desktop" ] ]
+                [ li [] [ a [ href "https://github.com/nixos/nixpkgs" ] [ text "nixos/nixpkgs" ], text " (nixpkgs package repository and the NixOS linux distribution)" ]
+                , li [] [ a [ href "https://github.com/youwen5/jankboard" ] [ text "team-1280/jankboard" ], text " (FRC Team 1280 robot control dashboard with 3D visuals)" ]
+                , li [] [ a [ href "https://github.com/zen-browser/www" ] [ text "zen-browser/desktop" ], text " cool firefox-based browser" ]
+                , li [] [ a [ href "https://virion.youwen.dev" ] [ text "youwen5/virion" ], text " (crummy compartmental modeling of disease, finalist proj at ucsb datathon)" ]
                 ]
             ]
         , p []
