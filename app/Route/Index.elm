@@ -82,7 +82,20 @@ body app shared =
             [ text <| "the message of the day is: " ++ app.data.message
             ]
         , p []
-            [ text "hi, im youwen. i study (pure) math and computer science at ucsb (co 2028). i like public transit and urban planning and functional programming and linux and foss and abstract algebra and other generally good things such as the wind gently rustling through the leaves as i stroll through the park."
+            [ text "hi, im youwen. i study (pure) math and computer science at ucsb (co 2028). i like public transit and urban planning and functional programming and music and foss and abstract algebra and other generally good things such as the wind gently rustling through the leaves as i stroll through the park."
+            ]
+        , p []
+            [ text "here is my "
+            , a [ href "/courses" ] [ text "university transcript" ]
+            , text ", "
+            , a [ href "https://github.com/youwen5" ] [ text "github" ]
+            , text ", "
+            , a [ href "https://www.last.fm/user/couscousdude" ] [ text "last.fm" ]
+            , text ", and "
+            , a [ href "/static/img/cat_babies.jpg" ] [ text "a picture of my cats." ]
+            ]
+        , p []
+            [ text "outside of math, i play guitar and spend way too much money on guitar pedals. i also hate coding."
             ]
         , p []
             [ text "some things i've worked on:"
@@ -90,14 +103,11 @@ body app shared =
                 [ li [] [ a [ href "https://github.com/nixos/nixpkgs" ] [ text "nixos/nixpkgs" ], text " (nixpkgs package repository and the NixOS linux distribution)" ]
                 , li [] [ a [ href "https://github.com/youwen5/jankboard" ] [ text "team-1280/jankboard" ], text " (FRC Team 1280 robot control dashboard with 3D visuals)" ]
                 , li [] [ a [ href "https://github.com/zen-browser/desktop" ] [ text "zen-browser/desktop" ], text " (cool firefox-based browser)" ]
-                , li [] [ a [ href "https://virion.youwen.dev" ] [ text "youwen5/virion" ], text " (crummy compartmental modeling of disease, finalist proj at ucsb datathon)" ]
+                , li [] [ a [ href "https://virion.youwen.dev" ] [ text "youwen5/virion" ], text " (crummy compartmental epidemic modeling in 3D, finalist proj at ucsb datathon)" ]
                 ]
             ]
         , p []
-            [ a [ href "/courses" ] [ text "a list of the courses ive taken at ucsb" ]
-            ]
-        , p []
-            [ text "excuse the mess! i'm in the middle of migrating from my old Svelte-based site to this Elm-based site. my old site is considerably more polished and still available at "
+            [ text "this page is a sprawling mess right now! i'm in the middle of migrating from my old Svelte-based site to this Elm-based site. my old site is considerably more polished and still available at "
             , a [ href "https://youwen.dev" ] [ text "https://youwen.dev" ]
             , text ", while i find some time to work on this one."
             ]
@@ -123,6 +133,7 @@ body app shared =
         , ul []
             [ li [] [ a [ href "https://arxiv.org/pdf/math/0305282" ] [ text "A Universal Approach to Self-Referential Paradoxes, Incompleteness and Fixed Points" ], text " (nonfiction, math): a generalization of many self-referential theorems" ]
             , li [] [ a [ href "https://scp-wiki.wikidot.com/we-need-to-talk-about-fifty-five" ] [ text "There Is No Antimemetics Division" ], text " (prose, fiction)" ]
+            , li [] [ a [ href "" ] [ text "Disco Elysium" ], text " (game, rpg): 11/10. life-changing." ]
             , li [] [ a [ href "https://anilist.co/anime/154587/Sousou-no-Frieren" ] [ text "Frieren" ], text " (anime)" ]
             ]
         , h2 [] [ text "about this site" ]
