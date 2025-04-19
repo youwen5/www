@@ -133,7 +133,7 @@ body app shared =
         , ul []
             [ li [] [ a [ href "https://arxiv.org/pdf/math/0305282" ] [ text "A Universal Approach to Self-Referential Paradoxes, Incompleteness and Fixed Points" ], text " (nonfiction, math): a generalization of many self-referential theorems" ]
             , li [] [ a [ href "https://scp-wiki.wikidot.com/we-need-to-talk-about-fifty-five" ] [ text "There Is No Antimemetics Division" ], text " (prose, fiction)" ]
-            , li [] [ a [ href "" ] [ text "Disco Elysium" ], text " (game, rpg): 11/10. life-changing." ]
+            , li [] [ a [ href "https://store.steampowered.com/app/632470/Disco_Elysium__The_Final_Cut/" ] [ text "Disco Elysium" ], text " (game, rpg): 11/10. life-changing." ]
             , li [] [ a [ href "https://anilist.co/anime/154587/Sousou-no-Frieren" ] [ text "Frieren" ], text " (anime)" ]
             ]
         , h2 [] [ text "about this site" ]
