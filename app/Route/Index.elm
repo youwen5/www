@@ -102,10 +102,14 @@ body app shared =
             , text ", while i find some time to work on this one."
             ]
         , p []
-            [ text "my software allegiances, for nerds who care:"
+            [ text "i use "
+            , a [ href "https://nixos.org" ] [ text "NixOS" ]
+            , text " (harder "
+            , a [ href "/static/img/archvsnixos.webp" ] [ text "than arch" ]
+            , text " btw)"
+            , text ". some setup details:"
             , ul []
-                [ li [] [ text "distro: ", a [ href "https://nixos.org" ] [ text "NixOS" ], text " (harder than arch btw)" ]
-                , li [] [ text "window manager: ", a [ href "https://hyprland.org" ] [ text "hyprland" ], text " with a ", a [ href "https://github.com/dawsers/hyprscroller" ] [ text "scrolling layout" ] ]
+                [ li [] [ text "window manager: ", a [ href "https://hyprland.org" ] [ text "hyprland" ], text " with a ", a [ href "https://github.com/dawsers/hyprscroller" ] [ text "scrolling layout" ] ]
                 , li [] [ text "kernel: linux-zen" ]
                 , li [] [ text "terminal: kitty" ]
                 , li [] [ text "editor: ", a [ href "https://github.com/youwen5/viminal2" ] [ text "neovim" ] ]
@@ -114,6 +118,11 @@ body app shared =
                 , li [] [ text "programming language: the best one for the task, but usually Rust/Haskell/Elm" ]
                 , li [] [ text "DAW: ", a [ href "https://www.reaper.fm/" ] [ text "reaper" ] ]
                 ]
+            ]
+        , h2 [] [ text "cool things ive read recently" ]
+        , ul []
+            [ li [] [ a [ href "https://arxiv.org/abs/math/0305282" ] [ text "A Universal Approach to Self-Referential Paradoxes, Incompleteness and Fixed Points" ], text ": (nonfiction, math) a generalization of many self-referential theorems" ]
+            , li [] [ a [ href "https://scp-wiki.wikidot.com/we-need-to-talk-about-fifty-five" ] [ text "There Is No Antimemetics Division" ], text " (fiction)" ]
             ]
         , h2 [] [ text "about this site" ]
         , p []
