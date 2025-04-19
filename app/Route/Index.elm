@@ -121,7 +121,7 @@ body app shared =
             ]
         , h2 [] [ text "cool things ive read recently" ]
         , ul []
-            [ li [] [ a [ href "https://arxiv.org/abs/math/0305282" ] [ text "A Universal Approach to Self-Referential Paradoxes, Incompleteness and Fixed Points" ], text ": (nonfiction, math) a generalization of many self-referential theorems" ]
+            [ li [] [ a [ href "https://arxiv.org/pdf/math/0305282" ] [ text "A Universal Approach to Self-Referential Paradoxes, Incompleteness and Fixed Points" ], text ": (nonfiction, math) a generalization of many self-referential theorems" ]
             , li [] [ a [ href "https://scp-wiki.wikidot.com/we-need-to-talk-about-fifty-five" ] [ text "There Is No Antimemetics Division" ], text " (fiction)" ]
             ]
         , h2 [] [ text "about this site" ]
