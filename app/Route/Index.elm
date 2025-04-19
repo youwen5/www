@@ -82,7 +82,7 @@ body app shared =
             [ text <| "the message of the day is: " ++ app.data.message
             ]
         , p []
-            [ text "hi, im youwen. i study (pure) math and computer science at ucsb (co 2028). i like public transit and urban planning and functional programming and linux and foss and algebra and other generally good things such as the wind gently rustling through the leaves as i stroll through the park."
+            [ text "hi, im youwen. i study (pure) math and computer science at ucsb (co 2028). i like public transit and urban planning and functional programming and linux and foss and abstract algebra and other generally good things such as the wind gently rustling through the leaves as i stroll through the park."
             ]
         , p []
             [ text "some things i've worked on:"
