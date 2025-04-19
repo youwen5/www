@@ -1,7 +1,7 @@
 module Route.Index exposing (ActionData, Data, Model, Msg, route)
 
 import BackendTask exposing (BackendTask)
-import Css exposing (auto, marginLeft, marginRight, maxWidth, px)
+import Css exposing (auto, em, fontSize, marginLeft, marginRight, maxWidth, px)
 import FatalError exposing (FatalError)
 import Head
 import Head.Seo as Seo
@@ -60,7 +60,7 @@ head :
 head app =
     Seo.summary
         { canonicalUrlOverride = Nothing
-        , siteName = "Web | Youwen Wu"
+        , siteName = "Youwen Wu's personal website"
         , image =
             { url = [ "images", "icon-png.png" ] |> UrlPath.join |> Pages.Url.fromPath
             , alt = "logo"
@@ -77,28 +77,26 @@ head app =
 body : { a | data : { b | message : String } } -> c -> List (Html.Styled.Html msg)
 body app shared =
     [ div [ css [ maxWidth (px 800), marginLeft auto, marginRight auto ] ]
-        [ h1 [] [ text "Youwen Wu" ]
-        , p []
-            [ text <| "the message of the day is: " ++ app.data.message
+        [ p []
+            [ text "Hi! Welcome to my site on the World Wide Web. I study (pure) math and computer science at "
+            , a [ href "https://ucsb.edu" ] [ text "UC Santa Barbara" ]
+            , text " (co 2028). I like public transit and urban planning and functional programming and music and foss and abstract algebra and other generally good things such as the wind gently rustling through the leaves as I stroll through the park."
             ]
         , p []
-            [ text "hi, im youwen. i study (pure) math and computer science at ucsb (co 2028). i like public transit and urban planning and functional programming and music and foss and abstract algebra and other generally good things such as the wind gently rustling through the leaves as i stroll through the park."
-            ]
-        , p []
-            [ text "here is my "
+            [ text "Here is my "
             , a [ href "/courses" ] [ text "university transcript" ]
             , text ", "
-            , a [ href "https://github.com/youwen5" ] [ text "github" ]
+            , a [ href "https://github.com/youwen5" ] [ text "GitHub" ]
             , text ", "
             , a [ href "https://www.last.fm/user/couscousdude" ] [ text "last.fm" ]
             , text ", and "
             , a [ href "/static/img/cat_babies.jpg" ] [ text "a picture of my cats." ]
             ]
         , p []
-            [ text "outside of math, i play guitar and spend way too much money on guitar pedals. i also hate coding."
+            [ text "Outside of math, I play guitar and spend way too much money on guitar pedals. I also hate coding."
             ]
         , p []
-            [ text "some things i've worked on:"
+            [ text "Some things i've worked on:"
             , ul []
                 [ li [] [ a [ href "https://github.com/nixos/nixpkgs" ] [ text "nixos/nixpkgs" ], text " (nixpkgs package repository and the NixOS linux distribution)" ]
                 , li [] [ a [ href "https://github.com/youwen5/jankboard" ] [ text "team-1280/jankboard" ], text " (FRC Team 1280 robot control dashboard with 3D visuals)" ]
@@ -107,17 +105,22 @@ body app shared =
                 ]
             ]
         , p []
-            [ text "this page is a sprawling mess right now! i'm in the middle of migrating from my old Svelte-based site to this Elm-based site. my old site is considerably more polished and still available at "
+            [ text "This page is a sprawling mess right now! I'm in the middle of migrating from my old Svelte-based site to this Elm-based site. My old site is considerably more polished and still available at "
             , a [ href "https://youwen.dev" ] [ text "https://youwen.dev" ]
             , text ", while i find some time to work on this one."
             ]
         , p []
-            [ text "i use "
+            [ text "To contact me, see the "
+            , a [ href "/impressum" ] [ text "impressum" ]
+            , text "."
+            ]
+        , p []
+            [ text "I use "
             , a [ href "https://nixos.org" ] [ text "NixOS" ]
             , text " (harder "
             , a [ href "/static/img/archvsnixos.webp" ] [ text "than arch" ]
             , text " btw)"
-            , text ". some setup details:"
+            , text ". Some setup details:"
             , ul []
                 [ li [] [ text "window manager: ", a [ href "https://hyprland.org" ] [ text "hyprland" ], text " with a ", a [ href "https://github.com/dawsers/hyprscroller" ] [ text "scrolling layout" ] ]
                 , li [] [ text "kernel: linux-zen" ]
@@ -138,15 +141,15 @@ body app shared =
             ]
         , h2 [] [ text "about this site" ]
         , p []
-            [ text "welcome to my quiet corner of the world wide web! i continuously stay up to date with the latest trends in software development so i can do the exact opposite. i intend for this site to be a love letter to the web and what it represents -- namely, the free and unfettered exchange of information and human thought. to that end, i promise nothing on this site will ever be made by GenAI."
+            [ text "This is my quiet corner of the web! I continuously stay up to date with the latest trends in software development so I can do the exact opposite. I intend for this site to be a love letter to the web and what it represents - namely, the free and unfettered exchange of information and human thought. To that end, I promise nothing on this site will ever be made by GenAI."
             ]
         , p []
-            [ text "this site was built with "
+            [ text "This site was built with "
             , a [ href "https://elm-lang.org/" ] [ text "elm" ]
-            , text ", a purely functional programming language for writing web apps. programming in elm is delightful and lets you ignore all mainstream web trends and frameworks while ruling out entire classes of unwanted behavior through the careful design of types. all without writing a single line of html/css/js."
+            , text ", a purely functional programming language for writing web apps. Programming in elm is delightful and lets you ignore all mainstream web trends and frameworks while ruling out entire classes of unwanted behavior through the careful design of types. all without writing a single line of HTML/CSS/JS."
             ]
         , p []
-            [ text "unfortunately, this has some undesired side effects. you may have noticed this site is entirely empty and unstyled. this unfortunate reality is due to the fact that ive been far too busy scaffolding the theoretical foundations of the site and pondering the mathematical structure of its type system to actually learn how to do CSS, or write any content."
+            [ text "Unfortunately, this has some undesired side effects. You may have noticed this site is entirely empty and unstyled. This unfortunate reality is due to the fact that I've been far too busy scaffolding the theoretical foundations of the site and pondering the mathematical structure of its type system to actually learn how to do CSS, or write any content."
             ]
         , p []
             [ a [ href "https://github.com/youwen5/www" ] [ text "source code of this site" ]
@@ -202,6 +205,6 @@ view :
     -> Shared.Model
     -> View (PagesMsg Msg)
 view app shared =
-    { title = "welcome"
+    { title = "home"
     , body = map toUnstyled (body app shared)
     }

@@ -3,8 +3,8 @@ module Shared exposing (Data, Model, Msg(..), SharedMsg(..), template)
 import BackendTask exposing (BackendTask)
 import Effect exposing (Effect)
 import FatalError exposing (FatalError)
-import Html exposing (Html)
-import Html.Attributes exposing (href)
+import Html exposing (Html, text)
+import Html.Attributes exposing (href, style)
 import Html.Events
 import Pages.Flags
 import Pages.PageUrl exposing (PageUrl)
@@ -94,24 +94,45 @@ view :
     -> { body : List (Html msg), title : String }
 view sharedData page model toMsg pageView =
     { body =
-        [ Html.nav []
-            [ Html.button
-                [ Html.Events.onClick MenuClicked ]
-                [ Html.text
-                    (if model.showMenu then
-                        "Close Menu"
-
-                     else
-                        "Open Menu"
-                    )
-                ]
-            , if model.showMenu then
-                Html.ul []
-                    [ Html.li [] [ Html.a [ href "/" ] [ Html.text "back to home" ] ]
+        [ Html.nav
+            [ style "display" "flex"
+            , style "justify-content" "space-between"
+            , style "align-items" "center"
+            , style "padding" "10px 0px"
+            , style "border-bottom" "1px solid #dee2e6"
+            , style "max-width" "800px"
+            , style "margin-left" "auto"
+            , style "margin-right" "auto"
+            , style "margin-bottom" "10px"
+            ]
+            [ Html.div
+                []
+                [ Html.h1
+                    [ style "font-size" "2em"
+                    , style "font-weight" "bold"
+                    , style "margin" "0"
                     ]
-
-              else
-                Html.text ""
+                    [ text "Youwen Wu" ]
+                ]
+            , Html.ul
+                [ style "list-style-type" "none" -- Remove default list bullets
+                , style "margin" "0" -- Remove default margin
+                , style "padding" "0" -- Remove default padding
+                , style "display" "flex" -- Lay out links horizontally
+                ]
+                [ Html.li [ style "margin-left" "15px" ]
+                    [ Html.a
+                        [ href "/"
+                        ]
+                        [ text "Home" ]
+                    ]
+                , Html.li [ style "margin-left" "15px" ]
+                    [ Html.a
+                        [ href "/impressum"
+                        ]
+                        [ text "Impressum" ]
+                    ]
+                ]
             ]
             |> Html.map toMsg
         , Html.main_ [] pageView.body
