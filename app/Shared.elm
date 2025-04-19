@@ -99,7 +99,7 @@ view sharedData page model toMsg pageView =
             , style "justify-content" "space-between"
             , style "align-items" "center"
             , style "padding" "10px 0px"
-            , style "border-bottom" "1px solid #dee2e6"
+            , style "border-bottom" "1px solid var(--iris)"
             , style "max-width" "800px"
             , style "margin-left" "auto"
             , style "margin-right" "auto"
@@ -119,6 +119,7 @@ view sharedData page model toMsg pageView =
                 , style "margin" "0" -- Remove default margin
                 , style "padding" "0" -- Remove default padding
                 , style "display" "flex" -- Lay out links horizontally
+                , style "font-size" "1.2rem"
                 ]
                 [ Html.li [ style "margin-left" "15px" ]
                     [ Html.a

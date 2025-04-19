@@ -11,7 +11,7 @@ import Effect
 import ErrorPage
 import FatalError
 import Head
-import Html exposing (a, text)
+import Html exposing (a, span, text)
 import Html.Attributes exposing (href, style)
 import PagesMsg
 import RouteBuilder
@@ -112,13 +112,26 @@ view app shared model =
             , Html.p [ style "font-style" "italic" ]
                 [ text "Youwen Wu"
                 , Html.br [] []
-                , text "University of Calfornia"
+                , text "University of California"
                 , Html.br [] []
                 , text "Santa Barbara, CA"
                 , Html.br [] []
                 , text "United States of America"
+                , Html.br [ style "margin" "0 0 1em 0" ] []
+                , text "Contact: youwen (at) ucsb.edu"
                 , Html.br [] []
-                , text "contact: youwen (at) ucsb.edu"
+                , span [ style "font-style" "normal", style "font-family" "monospace" ] [ text "D26A 0082 4013D524 BDF1 1126 093F 1185 C55B 84A2" ]
+                , Html.br [] []
+                , text "Or: "
+                , text "youwenw (at) gmail.com"
+                , Html.br [] []
+                , span [ style "font-style" "normal", style "font-family" "monospace" ] [ text "8F5E 6C1A F909 76CA 7102 917A 8656 58ED 1FE6 1EC3" ]
+                , Html.br [] []
+                , text "Keys available in "
+                , a [ href "https://keys.openpgp.org/" ] [ text "OpenPGP" ]
+                , text " and "
+                , a [ href "https://pgp.mit.edu/" ] [ text "MIT" ]
+                , text " keyservers."
                 ]
             , Html.h2 [] [ Html.text "Colophon" ]
             , Html.p []
@@ -137,4 +150,3 @@ action :
     -> BackendTask.BackendTask FatalError.FatalError (Server.Response.Response ActionData ErrorPage.ErrorPage)
 action routeParams request =
     BackendTask.succeed (Server.Response.render {})
-

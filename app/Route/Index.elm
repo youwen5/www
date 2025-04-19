@@ -146,7 +146,7 @@ body app shared =
         , p []
             [ text "This site was built with "
             , a [ href "https://elm-lang.org/" ] [ text "elm" ]
-            , text ", a purely functional programming language for writing web apps. Programming in elm is delightful and lets you ignore all mainstream web trends and frameworks while ruling out entire classes of unwanted behavior through the careful design of types. all without writing a single line of HTML/CSS/JS."
+            , text ", a purely functional programming language for writing web apps. Programming in elm is delightful and lets you ignore all mainstream web trends and frameworks while ruling out entire classes of unwanted behavior through the careful design of types. All without writing a single line of HTML/CSS/JS."
             ]
         , p []
             [ text "Unfortunately, this has some undesired side effects. You may have noticed this site is entirely empty and unstyled. This unfortunate reality is due to the fact that I've been far too busy scaffolding the theoretical foundations of the site and pondering the mathematical structure of its type system to actually learn how to do CSS, or write any content."

@@ -63,7 +63,7 @@
     --love:    #eb6f92;
     --gold:    #f6c177;
     --rose:    #ea9a97;
-    --pine:    #2a283e;
+    --pine:    #3e8fb0;
     --foam:    #44415a;
     --iris:    #56526e;
   }
@@ -111,7 +111,6 @@ h6 { font-size: 1em; }
 
 p {
   margin-top: 0;
-  margin-bottom: 1rem;
 }
 
 /* ======================================================
@@ -205,7 +204,7 @@ code {
 pre {
   background-color: var(--overlay);
   padding: 1em;
-  overflow-x: auto; /* Handle long lines of code */
+  overflow-x: auto;
   border-radius: 3px;
 }
 
